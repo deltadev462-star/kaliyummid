@@ -972,6 +972,27 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     background: linear-gradient(135deg, #FFE66D 0%, #FF6B6B 100%);
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Logo inside gradient overlay */
+.overlay-logo {
+    width: 60%;
+    height: 60%;
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: contain;
+    filter: brightness(0) invert(1); /* Makes the logo white */
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.item-4:hover .overlay-logo {
+    transform: scale(1.1) rotate(5deg);
+    opacity: 1;
 }
 
 /* Add floating animation for cartoon items */
