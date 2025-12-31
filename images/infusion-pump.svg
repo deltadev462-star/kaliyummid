@@ -1,0 +1,51 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pumpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fluidGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00B4D8;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#0077B6;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+  
+  <!-- IV Pole -->
+  <rect x="25" y="20" width="8" height="150" fill="#636E72" stroke="#2D3436" stroke-width="2"/>
+  <rect x="15" y="170" width="28" height="5" fill="#636E72" stroke="#2D3436" stroke-width="2"/>
+  
+  <!-- IV Bag -->
+  <path d="M 45 30 Q 45 20, 55 20 L 75 20 Q 85 20, 85 30 L 85 70 Q 85 80, 75 85 L 65 90 L 55 85 Q 45 80, 45 70 Z" 
+        fill="#F8F9FA" stroke="#2D3436" stroke-width="3"/>
+  <rect x="50" y="40" width="30" height="35" rx="3" fill="url(#fluidGrad)"/>
+  
+  <!-- Pump unit -->
+  <rect x="100" y="60" width="80" height="100" rx="10" fill="url(#pumpGrad)" stroke="#2D3436" stroke-width="3"/>
+  
+  <!-- Display screen -->
+  <rect x="110" y="70" width="60" height="35" rx="5" fill="#2D3436"/>
+  <text x="140" y="92" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="#00FF00">125</text>
+  <text x="140" y="102" text-anchor="middle" font-family="Arial" font-size="8" fill="#00FF00">mL/hr</text>
+  
+  <!-- Control buttons -->
+  <circle cx="120" cy="120" r="8" fill="#FF6B6B" stroke="#2D3436" stroke-width="2"/>
+  <circle cx="140" cy="120" r="8" fill="#FFE66D" stroke="#2D3436" stroke-width="2"/>
+  <circle cx="160" cy="120" r="8" fill="#00FF00" stroke="#2D3436" stroke-width="2"/>
+  
+  <!-- Flow indicator -->
+  <rect x="115" y="135" width="50" height="15" rx="7" fill="#E9ECEF" stroke="#2D3436" stroke-width="2"/>
+  <circle cx="125" cy="142" r="5" fill="#00FF00"/>
+  
+  <!-- Tubing -->
+  <path d="M 65 90 Q 80 100, 100 100" fill="none" stroke="#2D3436" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 180 110 Q 190 120, 190 140" fill="none" stroke="#2D3436" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- Drops animation hint -->
+  <circle cx="65" cy="95" r="2" fill="#00B4D8"/>
+  <circle cx="65" cy="102" r="2" fill="#00B4D8" opacity="0.6"/>
+  <circle cx="65" cy="109" r="2" fill="#00B4D8" opacity="0.3"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="150" cy="40" r="3" fill="#FFE66D" opacity="0.7"/>
+  <circle cx="160" cy="45" r="2" fill="#FF6B6B" opacity="0.7"/>
+</svg>

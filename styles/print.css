@@ -1,0 +1,535 @@
+/* Print Styles for PDF Export */
+
+@media print {
+    /* Global Print Settings */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+    
+    @page {
+        size: A4;
+        margin: 20mm;
+    }
+    
+    /* Reset body for print */
+    body {
+        font-size: 11pt;
+        line-height: 1.5;
+        color: #000 !important;
+        background: #fff !important;
+    }
+    
+    /* Hide non-printable elements */
+    .lang-toggle,
+    .export-btn,
+    .preloader,
+    .load-more-wrapper,
+    .modal,
+    .device-modal,
+    .hero-bg,
+    .gradient-orb,
+    .floating-card,
+    .visual-item:nth-child(4) {
+        display: none !important;
+    }
+    
+    /* Header adjustments */
+    .main-header {
+        position: static;
+        background: #fff !important;
+        box-shadow: none !important;
+        padding: 10mm 0;
+        border-bottom: 2px solid #6C63FF;
+    }
+    
+    /* Navigation */
+    .main-nav {
+        display: flex !important;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .nav-link {
+        color: #000 !important;
+        text-decoration: none;
+    }
+    
+    /* Hero section */
+    .hero {
+        min-height: auto;
+        padding: 30mm 0 20mm;
+        page-break-after: always;
+    }
+    
+    .hero-title {
+        font-size: 36pt !important;
+        color: #000 !important;
+        margin-bottom: 10mm;
+    }
+    
+    .gradient-text {
+        color: #6C63FF !important;
+        background: none !important;
+        -webkit-text-fill-color: #6C63FF !important;
+    }
+    
+    .hero-subtitle {
+        font-size: 14pt;
+        color: #333 !important;
+        margin-bottom: 15mm;
+    }
+    
+    .cta-btn {
+        display: inline-block;
+        padding: 8px 20px;
+        background: #6C63FF !important;
+        color: #fff !important;
+        border-radius: 25px;
+        text-decoration: none;
+    }
+    
+    /* Sections */
+    .devices-section,
+    .about-section,
+    .contact-section {
+        padding: 20mm 0;
+        page-break-before: auto;
+        page-break-inside: avoid;
+    }
+    
+    .section-header {
+        margin-bottom: 15mm;
+        page-break-after: avoid;
+    }
+    
+    .section-title {
+        font-size: 28pt !important;
+        color: #000 !important;
+        margin-bottom: 5mm;
+    }
+    
+    .section-subtitle {
+        font-size: 12pt;
+        color: #555 !important;
+    }
+    
+    /* Filter tabs - show as text */
+    .filter-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 15mm;
+        flex-wrap: wrap;
+    }
+    
+    .filter-tab {
+        padding: 5px 15px;
+        border: 1px solid #6C63FF;
+        border-radius: 20px;
+        background: #fff !important;
+        color: #6C63FF !important;
+    }
+    
+    .filter-tab.active {
+        background: #6C63FF !important;
+        color: #fff !important;
+    }
+    
+    /* Devices Grid - Maintain 5 columns */
+    .devices-grid {
+        display: grid !important;
+        grid-template-columns: repeat(5, 1fr) !important;
+        gap: 10mm !important;
+        margin-bottom: 20mm;
+    }
+    
+    /* Device cards */
+    .device-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff !important;
+        box-shadow: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .device-image {
+        height: 150px;
+        background: #f5f5f5;
+    }
+    
+    .device-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: none !important;
+    }
+    
+    .device-info {
+        padding: 8px;
+    }
+    
+    .device-name {
+        font-size: 10pt;
+        font-weight: 600;
+        color: #000 !important;
+        margin-bottom: 2px;
+    }
+    
+    .device-description {
+        font-size: 8pt;
+        color: #555 !important;
+        line-height: 1.3;
+    }
+    
+    /* About section */
+    .about-content {
+        display: block !important;
+    }
+    
+    .about-description {
+        font-size: 12pt;
+        margin-bottom: 15mm;
+        color: #333 !important;
+    }
+    
+    .features-list {
+        margin-bottom: 15mm;
+    }
+    
+    .feature {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10mm;
+        break-inside: avoid;
+    }
+    
+    .feature-icon {
+        width: 30px;
+        height: 30px;
+        background: #6C63FF !important;
+        border-radius: 8px;
+        margin-right: 10px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .feature-icon svg {
+        width: 20px;
+        height: 20px;
+        stroke: #fff !important;
+    }
+    
+    .feature h3 {
+        font-size: 12pt;
+        margin-bottom: 2mm;
+        color: #000 !important;
+    }
+    
+    .feature p {
+        font-size: 10pt;
+        color: #555 !important;
+    }
+    
+    /* Visual grid - show in print */
+    .visual-grid {
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 10mm !important;
+        height: auto !important;
+        margin: 15mm 0;
+    }
+    
+    .visual-item {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        height: 50mm !important;
+        border: 1px solid #ddd !important;
+        border-radius: 10px !important;
+        overflow: hidden !important;
+        background: #fff !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .visual-item.cartoon-item {
+        background: #f8f9fa !important;
+        padding: 5mm !important;
+    }
+    
+    .visual-item.cartoon-item img {
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 90% !important;
+        height: 35mm !important;
+        object-fit: contain !important;
+        padding: 0 !important;
+        animation: none !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 1 !important;
+    }
+    
+    .device-label {
+        position: static !important;
+        width: 100% !important;
+        padding: 3mm !important;
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        font-size: 10pt !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+    
+    /* Hide the decorative 4th item */
+    
+    /* Ensure images are visible in print */
+    .visual-item.cartoon-item img {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        max-width: 100% !important;
+        height: auto !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    
+    /* Force browsers to wait for images before printing */
+    @media print {
+        /* Ensure images are loaded */
+        .visual-item.cartoon-item {
+            min-height: 50mm !important;
+        }
+        
+        /* Alternative approach: use background images for print reliability */
+        .visual-item.cartoon-item::before {
+            content: '' !important;
+            display: none !important;
+        }
+        
+        /* Force image rendering in all browsers */
+        img {
+            image-rendering: auto !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        
+        /* Specific fix for Chrome/Edge print preview */
+        @supports (-webkit-appearance: none) {
+            img {
+                transform: translateZ(0) !important;
+                will-change: transform !important;
+            }
+        }
+    }
+    }
+    
+    /* Force image rendering */
+    img[src] {
+        display: block !important;
+        page-break-inside: avoid !important;
+    }
+    .item-4 {
+        display: none !important;
+    }
+    
+    /* Contact section */
+    .contact-section {
+        background: #f5f5f5 !important;
+        color: #000 !important;
+        padding: 15mm;
+        border-radius: 10px;
+    }
+    
+    .contact-subtitle {
+        color: #333 !important;
+        opacity: 1 !important;
+    }
+    
+    .contact-info {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 10mm;
+        flex-wrap: wrap;
+        gap: 10mm;
+    }
+    
+    .info-item {
+        color: #000 !important;
+    }
+    
+    .info-item svg {
+        stroke: #6C63FF !important;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .contact-btn {
+        display: inline-block;
+        padding: 8px 20px;
+        background: #FF6B6B !important;
+        color: #fff !important;
+        border-radius: 25px;
+    
+    /* WhatsApp Contact for PDF */
+    .whatsapp-contact {
+        display: inline-flex !important;
+        align-items: center;
+        gap: 10mm;
+        margin: 10mm auto;
+        padding: 5mm 10mm;
+        border: 2px solid #25D366 !important;
+        border-radius: 25px;
+        background: #f0f9f4 !important;
+        page-break-inside: avoid;
+    }
+    
+    .whatsapp-icon-wrapper {
+        width: 15mm;
+        height: 15mm;
+        background: white !important;
+        border: 1px solid #25D366;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .whatsapp-icon {
+        width: 10mm;
+        height: 10mm;
+    }
+    
+    .whatsapp-details {
+        text-align: left;
+    }
+    
+    .whatsapp-label {
+        font-size: 10pt;
+        color: #333 !important;
+        margin: 0;
+    }
+    
+    .whatsapp-number {
+        font-size: 14pt;
+        font-weight: 600;
+        color: #25D366 !important;
+        margin: 2mm 0;
+        letter-spacing: 0.5mm;
+        /* Make the number selectable and copiable */
+        user-select: text !important;
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+    }
+    
+    .whatsapp-hint {
+        font-size: 8pt;
+        color: #666 !important;
+        font-style: italic;
+        margin: 0;
+    }
+    }
+    
+    /* Footer */
+    .main-footer {
+        background: #fff !important;
+        color: #555 !important;
+        padding: 10mm 0;
+        text-align: center;
+        border-top: 1px solid #ddd;
+        margin-top: 20mm;
+    }
+    
+    /* Page breaks */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    .device-card {
+        page-break-inside: avoid;
+    }
+    
+    /* Ensure images print */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    /* Links */
+    a {
+        color: #6C63FF !important;
+        text-decoration: none !important;
+    }
+    
+    /* Animations - disable */
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    /* Smaller screens adjustments for print */
+    @page {
+        @bottom-center {
+            content: "Page " counter(page) " of " counter(pages);
+            font-size: 10pt;
+            color: #666;
+        }
+    }
+    
+    /* Ensure text is readable */
+    p, span, div {
+        widows: 3;
+        orphans: 3;
+    }
+    
+    /* Color preservation for important elements */
+    .gradient-primary,
+    .gradient-secondary {
+        background: #6C63FF !important;
+        color: #fff !important;
+    }
+}
+
+/* High quality print */
+@media print and (min-resolution: 300dpi) {
+    body {
+        font-size: 10pt;
+    }
+    
+    .device-image {
+        height: 120px;
+    }
+    
+    .devices-grid {
+        gap: 8mm !important;
+    }
+}
+
+/* Portrait orientation specific */
+@media print and (orientation: portrait) {
+    .devices-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+
+/* Landscape orientation specific */
+@media print and (orientation: landscape) {
+    .devices-grid {
+        grid-template-columns: repeat(6, 1fr) !important;
+    }
+    
+    @page {
+        size: A4 landscape;
+        margin: 15mm;
+    }
+}

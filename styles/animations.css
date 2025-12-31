@@ -1,0 +1,319 @@
+/* Kalium-Style Animations */
+
+/* Keyframes */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Reveal Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-30px);
+}
+
+.reveal-left.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(30px);
+}
+
+.reveal-right.active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.reveal-scale.active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Device Card Animations */
+.device-card {
+    animation: fadeIn 0.6s ease forwards;
+    transform: translateY(0);
+}
+
+.device-card:nth-child(1) { animation-delay: 0.1s; }
+.device-card:nth-child(2) { animation-delay: 0.15s; }
+.device-card:nth-child(3) { animation-delay: 0.2s; }
+.device-card:nth-child(4) { animation-delay: 0.25s; }
+.device-card:nth-child(5) { animation-delay: 0.3s; }
+.device-card:nth-child(6) { animation-delay: 0.35s; }
+.device-card:nth-child(7) { animation-delay: 0.4s; }
+.device-card:nth-child(8) { animation-delay: 0.45s; }
+.device-card:nth-child(9) { animation-delay: 0.5s; }
+.device-card:nth-child(10) { animation-delay: 0.55s; }
+
+/* Hover Animations */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-10px);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate {
+    transition: transform 0.3s ease;
+}
+
+.hover-rotate:hover {
+    transform: rotate(5deg);
+}
+
+/* Button Animations */
+button, .btn {
+    position: relative;
+    overflow: hidden;
+}
+
+button::before, .btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+button:active::before, .btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Link Animations */
+a {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.underline-animation {
+    position: relative;
+}
+
+.underline-animation::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s ease;
+}
+
+.underline-animation:hover::after {
+    width: 100%;
+}
+
+/* Image Animations */
+.image-zoom {
+    overflow: hidden;
+}
+
+.image-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.image-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* Loading Animation */
+.skeleton {
+    background: linear-gradient(
+        90deg,
+        #f0f0f0 25%,
+        #e0e0e0 50%,
+        #f0f0f0 75%
+    );
+    background-size: 200% 100%;
+    animation: skeleton 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Scroll Animations */
+.parallax {
+    will-change: transform;
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.fade-up.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger Animation */
+.stagger {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.stagger.animate {
+    animation: slideInUp 0.6s ease forwards;
+}
+
+.stagger:nth-child(1) { animation-delay: 0.1s; }
+.stagger:nth-child(2) { animation-delay: 0.2s; }
+.stagger:nth-child(3) { animation-delay: 0.3s; }
+.stagger:nth-child(4) { animation-delay: 0.4s; }
+.stagger:nth-child(5) { animation-delay: 0.5s; }
+
+/* Modal Animations */
+.modal-fade {
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-scale {
+    animation: scaleIn 0.3s ease;
+}
+
+/* Mobile Touch Feedback */
+@media (hover: none) and (pointer: coarse) {
+    .device-card:active {
+        transform: scale(0.98);
+    }
+    
+    button:active, .btn:active {
+        transform: scale(0.95);
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Performance Optimizations */
+.will-animate {
+    will-change: transform, opacity;
+}
+
+.gpu-accelerate {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}

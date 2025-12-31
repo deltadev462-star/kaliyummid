@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Modern medical devices portfolio - Innovative healthcare equipment showcase">
+    <meta name="theme-color" content="#6C63FF">
+    
+    <title>Wimed - Medical Devices Portfolio | Portfolio Dispositifs Médicaux</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/svg+xml" href="wimed_final.svg">
+    <link rel="apple-touch-icon" href="wimed_final.svg">
+    
+    <!-- Local Fonts -->
+    <link rel="stylesheet" href="styles/fonts.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+    </div>
+
+    <!-- Export Button -->
+    <button class="export-btn" id="exportPdf">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8L14 2Z" stroke="currentColor" stroke-width="2"/>
+            <path d="M14 2V8H20" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 11V17" stroke="currentColor" stroke-width="2"/>
+            <path d="M9 14L12 17L15 14" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <span data-en="Export PDF" data-fr="Exporter PDF">Export PDF</span>
+    </button>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle delay"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">
+                <span class="logo-text">Wi</span><span class="logo-accent">med</span>
+            </h1>
+            
+            <!-- Hamburger Menu Button for Mobile -->
+            <button class="menu-toggle" aria-label="Toggle Menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            
+            <nav class="main-nav">
+                <a href="#home" class="nav-link" data-en="Home" data-fr="Accueil">Accueil</a>
+                <a href="#patient-monitoring" class="nav-link" data-en="Patient Monitoring" data-fr="Surveillance des Patients">Surveillance des Patients</a>
+                <a href="#electrosurgery" class="nav-link" data-en="Electrosurgery" data-fr="Électrochirurgie">Électrochirurgie</a>
+                <a href="#endoscopy" class="nav-link" data-en="Endoscopy & Laparoscopy" data-fr="Endoscopie et Laparoscopie">Endoscopie et Laparoscopie</a>
+                <a href="#flexible-endoscopes" class="nav-link" data-en="Flexible Endoscopes" data-fr="Endoscopes Flexibles">Endoscopes Flexibles</a>
+                <a href="#anesthesia" class="nav-link" data-en="Anesthesia" data-fr="Anesthésie">Anesthésie</a>
+                <a href="#services" class="nav-link" data-en="Services" data-fr="Services">Services</a>
+                <a href="#about" class="nav-link" data-en="About" data-fr="À Propos">À Propos</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-fr="Contactez-nous">Contactez-nous</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">
+                    <span data-en="Innovative Medical" data-fr="Dispositifs Médicaux">Innovative Medical</span>
+                    <span class="gradient-text" data-en="Devices" data-fr="Innovants">Devices</span>
+                </h2>
+                <p class="hero-subtitle"
+                   data-en="Wimed – Your trusted partner for delivering cutting-edge medical solutions across Africa, with global expertise and continuous innovation to ensure quality and safety in healthcare."
+                   data-fr="Wimed – Votre partenaire de confiance pour fournir des solutions médicales de pointe à travers l'Afrique, avec une expertise mondiale et une innovation continue pour garantir la qualité et la sécurité des soins de santé.">
+                    Wimed – Your trusted partner for delivering cutting-edge medical solutions across Africa, with global expertise and continuous innovation to ensure quality and safety in healthcare.
+                </p>
+                <a href="#devices" class="cta-btn">
+                    <span data-en="Explore Collection" data-fr="Explorer la Collection">Explore Collection</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-grid">
+                    <div class="hero-img-wrapper">
+                        <img src="images/devices/50-photo.jpg" alt="Wimed Medical Technology" class="hero-img hero-img-1" />
+                    </div>
+                    <div class="hero-img-wrapper">
+                        <img src="images/devices/51-photo.jpg" alt="Wimed Healthcare Solutions" class="hero-img hero-img-2" />
+                    </div>
+                    <div class="hero-img-wrapper">
+                        <img src="images/devices/52-photo.jpg" alt="Wimed Innovation" class="hero-img hero-img-3" />
+                    </div>
+                    <div class="hero-img-wrapper">
+                        <img src="images/devices/53-photo.jpg" alt="Wimed Excellence" class="hero-img hero-img-4" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Devices Grid Section -->
+    <section id="devices" class="devices-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    <span data-en="Our" data-fr="Notre">Our</span>
+                    <span class="gradient-text" data-en="Portfolio" data-fr="Portfolio">Portfolio</span>
+                </h2>
+                <p class="section-subtitle" 
+                   data-en="Discover our comprehensive range of medical equipment" 
+                   data-fr="Découvrez notre gamme complète d'équipements médicaux">
+                    Discover our comprehensive range of medical equipment
+                </p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">
+                    <span data-en="Home" data-fr="Accueil">Accueil</span>
+                </button>
+                <button class="filter-tab" data-filter="monitoring">
+                    <span data-en="Patient Monitoring" data-fr="Surveillance des Patients">Surveillance des Patients</span>
+                </button>
+                <button class="filter-tab" data-filter="surgical">
+                    <span data-en="Electrosurgery" data-fr="Électrochirurgie">Électrochirurgie</span>
+                </button>
+                <button class="filter-tab" data-filter="endoscopy">
+                    <span data-en="Endoscopy & Laparoscopy" data-fr="Endoscopie et Laparoscopie">Endoscopie et Laparoscopie</span>
+                </button>
+                <button class="filter-tab" data-filter="flexible">
+                    <span data-en="Flexible Endoscopes" data-fr="Endoscopes Flexibles">Endoscopes Flexibles</span>
+                </button>
+                <button class="filter-tab" data-filter="anesthesia">
+                    <span data-en="Anesthesia" data-fr="Anesthésie">Anesthésie</span>
+                </button>
+            </div>
+
+            <!-- Devices Grid -->
+            <div class="devices-grid" id="devicesGrid">
+                <!-- Devices will be dynamically loaded here -->
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more-wrapper">
+                <button class="load-more-btn" id="loadMore">
+                    <span data-en="Load More" data-fr="Charger Plus">Load More</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 5V19M5 12L12 19L19 12" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">
+                        <span data-en="About" data-fr="À propos de">About</span>
+                        <span class="gradient-text" data-en="Wimed" data-fr="Wimed">Wimed</span>
+                    </h2>
+                    <p class="about-description"
+                       data-en="Wimed is a leading French medical equipment brand specializing in advanced healthcare solutions. Our innovative approach combines French engineering excellence with cutting-edge medical technology to deliver superior patient care equipment worldwide."
+                       data-fr="Wimed est une marque française leader en équipements médicaux, spécialisée dans les solutions de santé avancées. Notre approche innovante allie l'excellence de l'ingénierie française à la technologie médicale de pointe pour fournir des équipements de soins aux patients de qualité supérieure dans le monde entier.">
+                        Wimed is a leading French medical equipment brand specializing in advanced healthcare solutions. Our innovative approach combines French engineering excellence with cutting-edge medical technology to deliver superior patient care equipment worldwide.
+                    </p>
+                    <div class="features-list">
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 11L12 14L22 4M21 12V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-en="Quality Certified" data-fr="Certifié Qualité">Quality Certified</h3>
+                            <p data-en="All equipment meets international standards" data-fr="Tous les équipements respectent les normes internationales">All equipment meets international standards</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-en="Fast Delivery" data-fr="Livraison Rapide">Fast Delivery</h3>
+                            <p data-en="Quick and secure worldwide shipping" data-fr="Expédition rapide et sécurisée dans le monde entier">Quick and secure worldwide shipping</p>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </div>
+                            <h3 data-en="Expert Support" data-fr="Support Expert">Expert Support</h3>
+                            <p data-en="24/7 technical assistance and training" data-fr="Assistance technique et formation 24/7">24/7 technical assistance and training</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="visual-grid">
+                        <div class="visual-item item-1 cartoon-item">
+                            <img src="images/devices/a-photo.jpg" alt="Wimed Technology - Medical Excellence" />
+                            <p class="device-label">Diagnostic Excellence</p>
+                        </div>
+                        <div class="visual-item item-2 cartoon-item">
+                            <img src="images/devices/b-photo.jpg" alt="Wimed Innovation - Advanced Solutions" />
+                            <p class="device-label">Patient Monitoring</p>
+                        </div>
+                        <div class="visual-item item-3 cartoon-item">
+                            <img src="images/devices/d-photo.jpg" alt="Wimed Quality - Treatment Solutions" />
+                            <p class="device-label">Treatment Solutions</p>
+                        </div>
+                        <div class="visual-item item-4">
+                            <div class="gradient-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">
+                    <span data-en="Get in" data-fr="Entrer en">Get in</span>
+                    <span class="gradient-text" data-en="Touch" data-fr="Contact">Touch</span>
+                </h2>
+                <p class="contact-subtitle" 
+                   data-en="Ready to upgrade your medical facility? Contact us today." 
+                   data-fr="Prêt à moderniser votre établissement médical? Contactez-nous aujourd'hui.">
+                    Ready to upgrade your medical facility? Contact us today.
+                </p>
+                
+                <h3 class="contact-subtitle-info"
+                    data-en="Contact Information"
+                    data-fr="Informations de Contact">
+                    Informations de Contact
+                </h3>
+                
+                <div class="contact-info">
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M17.657 16.657L13.414 20.9C13.2284 21.0854 13.0081 21.2328 12.7656 21.3336C12.523 21.4344 12.2631 21.4867 12 21.4867C11.7369 21.4867 11.477 21.4344 11.2344 21.3336C10.9919 21.2328 10.7716 21.0854 10.586 20.9L6.343 16.657C6.15775 16.4714 6.01028 16.2512 5.90943 16.0086C5.80859 15.7661 5.7563 15.5061 5.7555 15.243C5.7547 14.9799 5.80539 14.7196 5.90477 14.4764C6.00415 14.2333 6.1503 14.0122 6.335 13.826L8.172 11.99C8.361 11.801 8.556 11.606 8.757 11.404C8.958 11.202 9.172 11.022 9.398 10.865C9.624 10.708 9.856 10.567 10.094 10.444C10.332 10.321 10.581 10.228 10.84 10.165L11.69 9.94999C11.8935 9.89799 12.1065 9.89799 12.31 9.94999L13.16 10.165C13.419 10.228 13.668 10.321 13.906 10.444C14.144 10.567 14.376 10.708 14.602 10.865C14.828 11.022 15.042 11.202 15.243 11.404C15.444 11.606 15.639 11.801 15.828 11.99L17.665 13.827C17.8497 14.0127 17.9959 14.2335 18.0952 14.4765C18.1946 14.7195 18.2453 14.9797 18.2445 15.2427C18.2437 15.5057 18.1914 15.7656 18.0906 16.008C17.9897 16.2504 17.8422 16.4704 17.657 16.656V16.657Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M12 2V8M9 4V8M15 4V8" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <strong data-en="Address" data-fr="Adresse">Adresse</strong>
+                            <p>67 rue Aristide Briand 77124</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 8L10.89 13.26C11.2187 13.4793 11.6049 13.5963 12 13.5963C12.3951 13.5963 12.7813 13.4793 13.11 13.26L21 8M5 19H19C19.5304 19 20.0391 18.7893 20.4142 18.4142C20.7893 18.0391 21 17.5304 21 17V7C21 6.46957 20.7893 5.96086 20.4142 5.58579C20.0391 5.21071 19.5304 5 19 5H5C4.46957 5 3.96086 5.21071 3.58579 5.58579C3.21071 5.96086 3 6.46957 3 7V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <strong data-en="Email" data-fr="Email">Email</strong>
+                            <p>contact@wimed.fr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H8.37C8.66476 2.99993 8.95365 3.08075 9.20574 3.23392C9.45782 3.38709 9.66364 3.60649 9.8 3.868L11.25 6.768C11.3858 7.02808 11.4512 7.31816 11.4398 7.61106C11.4284 7.90396 11.3407 8.18977 11.185 8.442L9.651 10.911C10.5717 12.5594 11.9537 13.9414 13.602 14.862L16.071 13.329C16.3232 13.1733 16.609 13.0855 16.9019 13.0741C17.1948 13.0627 17.4849 13.1281 17.745 13.264L20.645 14.714C20.9064 14.8506 21.1258 15.0564 21.279 15.3085C21.4322 15.5606 21.513 15.8495 21.513 16.144V19.513C21.513 20.0434 21.3023 20.5521 20.9272 20.9272C20.5521 21.3023 20.0434 21.513 19.513 21.513C10.661 21.513 3.487 14.339 3.487 5.487L3 5Z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <div>
+                            <strong data-en="Phone" data-fr="Téléphone">Téléphone</strong>
+                            <p>+33 7 66 99 42 11</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-item">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 8V12L15 15M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <div>
+                            <strong data-en="Opening Hours" data-fr="Heures d'Ouverture">Heures d'Ouverture</strong>
+                            <p data-en="Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM<br>Sunday: Closed"
+                               data-fr="Lundi - Vendredi: 9h00 - 18h00<br>Samedi: 10h00 - 16h00<br>Dimanche: Fermé">
+                                Monday - Friday: 9:00 AM - 6:00 PM<br>
+                                Saturday: 10:00 AM - 4:00 PM<br>
+                                Sunday: Closed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp Contact for PDF -->
+                <div class="whatsapp-contact">
+                    <div class="whatsapp-icon-wrapper">
+                        <svg class="whatsapp-icon" width="40" height="40" viewBox="0 0 24 24" fill="#25D366">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.693.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                    </div>
+                    <div class="whatsapp-details">
+                        <p class="whatsapp-label" data-en="WhatsApp Contact" data-fr="Contact WhatsApp">WhatsApp Contact</p>
+                        <p class="whatsapp-number">+33 766 994 211</p>
+                        <p class="whatsapp-hint" data-en="Click to copy number" data-fr="Cliquez pour copier">Click to copy number</p>
+                    </div>
+                </div>
+                
+                <button class="contact-btn">
+                    <span data-en="Start Conversation" data-fr="Commencer la Conversation">Start Conversation</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                        <path d="M22 2L11 13M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2024 Wimed. <span data-en="All rights reserved" data-fr="Tous droits réservés">All rights reserved</span>.</p>
+        </div>
+    </footer>
+
+    <!-- Device Modal -->
+    <div class="device-modal" id="deviceModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2"/>
+                </svg>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Dynamic content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/devices-data.js"></script>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/pwa.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="monitorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#44A3AA;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D3436;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#636E72;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Monitor body -->
+  <rect x="30" y="40" width="140" height="100" rx="10" fill="url(#monitorGrad)" stroke="#2D3436" stroke-width="3"/>
+  
+  <!-- Screen -->
+  <rect x="45" y="55" width="110" height="60" rx="5" fill="url(#screenGrad)"/>
+  
+  <!-- ECG wave -->
+  <path d="M 55 85 L 65 85 L 70 65 L 75 105 L 80 85 L 90 85 L 95 80 L 100 90 L 105 85 L 115 85 L 120 75 L 125 95 L 130 85 L 145 85" 
+        fill="none" stroke="#00FF00" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        
+  <!-- Stand -->
+  <rect x="90" y="140" width="20" height="30" fill="#636E72" stroke="#2D3436" stroke-width="2"/>
+  <ellipse cx="100" cy="175" rx="35" ry="8" fill="#636E72" stroke="#2D3436" stroke-width="2"/>
+  
+  <!-- Buttons -->
+  <circle cx="165" cy="70" r="4" fill="#FF6B6B"/>
+  <circle cx="165" cy="85" r="4" fill="#FFE66D"/>
+  <circle cx="165" cy="100" r="4" fill="#00FF00"/>
+  
+  <!-- Screen shine -->
+  <ellipse cx="80" cy="70" rx="25" ry="15" fill="#FFFFFF" opacity="0.2"/>
+  
+  <!-- Decorative hearts -->
+  <path d="M 15 20 C 15 16, 11 14, 8 17 C 5 14, 1 16, 1 20 C 1 24, 8 30, 8 30 C 8 30, 15 24, 15 20 Z" 
+        fill="#FF6B6B" opacity="0.7"/>
+  <path d="M 195 155 C 195 151, 191 149, 188 152 C 185 149, 181 151, 181 155 C 181 159, 188 165, 188 165 C 188 165, 195 159, 195 155 Z" 
+        fill="#FF6B6B" opacity="0.7"/>
+</svg>
